@@ -1,0 +1,8 @@
+services:
+  crawler:
+    build: ./crawler
+    volumes:
+      - ./crawler:/app
+    command: python main.py
+    environment:
+      - PYTHONUNBUFFERED=1
