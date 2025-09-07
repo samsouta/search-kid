@@ -2,15 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, FileText, Shield, Users, AlertTriangle, Scale, Mail } from 'lucide-react';
 
+// Type for expandedSections state
+type ExpandedSections = {
+  [key: string]: boolean;
+};
+
 const TermsOfService = () => {
-  const [expandedSections, setExpandedSections] = useState({});
+  const [expandedSections, setExpandedSections] = useState<ExpandedSections>({});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const toggleSection = (sectionId) => {
+  // sectionId is string type
+  const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => ({
       ...prev,
       [sectionId]: !prev[sectionId]
@@ -22,7 +28,7 @@ const TermsOfService = () => {
       id: 'acceptance',
       title: 'Acceptance of Terms',
       icon: <FileText className="w-5 h-5" />,
-      content: `Welcome to SearchKid ("the Website," "we," "us," or "our"). By accessing or using our website and services, you ("User," "you," or "your") agree to be bound by these Terms of Service ("Terms," "Agreement"). If you do not agree to all of these terms, you are prohibited from using our website and services.`
+      content: `Welcome to SearchKid (&quot;the Website,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using our website and services, you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) agree to be bound by these Terms of Service (&quot;Terms,&quot; &quot;Agreement&quot;). If you do not agree to all of these terms, you are prohibited from using our website and services.`
     },
     {
       id: 'description',
@@ -34,22 +40,13 @@ const TermsOfService = () => {
       id: 'responsibilities',
       title: 'User Responsibilities and Acceptable Use',
       icon: <Users className="w-5 h-5" />,
-      content: `You agree to use our service only for lawful purposes and in accordance with these Terms. You agree not to use our service:
-
-• To violate any applicable law or regulation
-• To transmit, or procure the sending of, any advertising or promotional material without our prior written consent
-• To impersonate or attempt to impersonate the company, an employee, another user, or any other person or entity
-• To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website`
+      content: `You agree to use our service only for lawful purposes and in accordance with these Terms. You agree not to use our service:\n\n• To violate any applicable law or regulation\n• To transmit, or procure the sending of, any advertising or promotional material without our prior written consent\n• To impersonate or attempt to impersonate the company, an employee, another user, or any other person or entity\n• To engage in any other conduct that restricts or inhibits anyone&apos;s use or enjoyment of the Website`
     },
     {
       id: 'content-disclaimer',
       title: 'Content Disclaimer and Third-Party Links',
       icon: <AlertTriangle className="w-5 h-5" />,
-      content: `General Disclaimer: Our Website provides links to third-party Telegram channels. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party channels.
-
-Adult Content Warning: The Telegram channels indexed by our search engine may contain uncensored, sexually explicit, or other adult material. You must be at least 18 years of age to access such content.
-
-No Responsibility: We do not filter or review the content of the channels we index. You access linked channels at your own risk.`
+      content: `General Disclaimer: Our Website provides links to third-party Telegram channels. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party channels.\n\nAdult Content Warning: The Telegram channels indexed by our search engine may contain uncensored, sexually explicit, or other adult material. You must be at least 18 years of age to access such content.\n\nNo Responsibility: We do not filter or review the content of the channels we index. You access linked channels at your own risk.`
     },
     {
       id: 'intellectual-property',
@@ -61,7 +58,7 @@ No Responsibility: We do not filter or review the content of the channels we ind
       id: 'copyright',
       title: 'Copyright and DMCA Policy',
       icon: <FileText className="w-5 h-5" />,
-      content: `We respect the intellectual property rights of others. If you believe that any content linked to by our Website infringes your copyright, please notify us in accordance with our Digital Millennium Copyright Act ("DMCA") Policy by sending a notice of infringement to our designated agent at: darkken415@gmail.com.`
+      content: `We respect the intellectual property rights of others. If you believe that any content linked to by our Website infringes your copyright, please notify us in accordance with our Digital Millennium Copyright Act (&quot;DMCA&quot;) Policy by sending a notice of infringement to our designated agent at: darkken415@gmail.com.`
     },
     {
       id: 'limitation',
@@ -85,7 +82,7 @@ No Responsibility: We do not filter or review the content of the channels we ind
       id: 'changes',
       title: 'Changes to Terms',
       icon: <FileText className="w-5 h-5" />,
-      content: `We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of changes by updating the "Last Updated" date. By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.`
+      content: `We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of changes by updating the &quot;Last Updated&quot; date. By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.`
     }
   ];
 
@@ -168,7 +165,7 @@ No Responsibility: We do not filter or review the content of the channels we ind
           </div>
           <h3 className="text-2xl font-lora font-bold mb-4 text-white">Contact Us</h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            If you have any questions about these Terms, please don't hesitate to contact us. We're here to help and ensure you have the best experience with our service.
+            If you have any questions about these Terms, please don&apos;t hesitate to contact us. We&apos;re here to help and ensure you have the best experience with our service.
           </p>
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
             <Mail className="w-4 h-4 mr-2" />

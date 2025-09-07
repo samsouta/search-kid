@@ -33,32 +33,7 @@ const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose, onAccept }) =>
     visible: { opacity: 1 }
   };
 
-  const modalVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 25,
-        stiffness: 500,
-        duration: 0.3
-      }
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50,
-      transition: {
-        duration: 0.2
-      }
-    }
-  };
+
 
   return (
     <AnimatePresence mode="wait">
@@ -77,7 +52,6 @@ const TermsModal: React.FC<TermsModalProps> = ({ isOpen, onClose, onAccept }) =>
 
           {/* Modal */}
           <motion.div
-            variants={modalVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
