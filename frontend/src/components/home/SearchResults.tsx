@@ -7,18 +7,26 @@ import Image from 'next/image';
 interface SearchResultsProps {
   results: SearchResult[];
   isSearching: boolean;
-  isLoading: boolean;
   searchQuery: string;
   totalPages: number;
   currentPage: number;
   onPageChange: (page: number) => void;
+  isPaginationLoading?: boolean;
 }
 
-const SearchResults: React.FC<SearchResultsProps> = ({ results, isSearching, isLoading, searchQuery, totalPages, currentPage, onPageChange }) => {
+const SearchResults: React.FC<SearchResultsProps> = ({ 
+  results, 
+  isSearching, 
+  searchQuery, 
+  totalPages, 
+  currentPage, 
+  onPageChange,
+  isPaginationLoading = false
+}) => {
   const [messagePageIndex, setMessagePageIndex] = useState<Record<string, number>>({});
 
-  // Show loading state
-  if (isSearching || isLoading) {
+  // Show loading state for search or pagination
+  if (isSearching) {
     return (
       <div className="max-w-4xl mx-auto">
         <div className="grid gap-6 md:gap-8">
@@ -32,6 +40,13 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results, isSearching, isL
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Show loading message */}
+        <div className="text-center mt-8">
+          <p className="text-white/60 text-sm">
+            {isPaginationLoading ? 'Loading page...' : 'Searching...'}
+          </p>
         </div>
       </div>
     );
@@ -91,6 +106,12 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results, isSearching, isL
     }));
   };
 
+  // Enhanced page change handler with loading prevention
+  const handlePageChange = (page: number) => {
+    if (isPaginationLoading) return; // Prevent clicks during loading
+    onPageChange(page);
+  };
+
   // Display search results
   return (
     <div className="max-w-4xl mx-auto">
@@ -100,7 +121,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results, isSearching, isL
         </p>
       </div>
 
-      {/* // Card  */}
+      {/* Results Cards */}
       <div className="grid grid-cols-1 gap-6 md:gap-8">
         {results.map((result, index) => {
           const currentPageIndex = messagePageIndex[result.id || index.toString()] || 0;
@@ -159,37 +180,49 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results, isSearching, isL
                 ))}
               </div>
 
-              {/* Navigation Buttons */}
-              <div className="mt-4 flex justify-center gap-4">
-                {hasPreviousPage && (
-                  <button
-                    onClick={() => handlePreviousMessages(result.id.toString() || index.toString())}
-                    className="px-4 py-2 text-sm text-white/70 hover:text-white/90 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-200"
-                  >
-                    Previous Messages
-                  </button>
-                )}
-                {hasNextPage && (
-                  <button
-                    onClick={() => handleNextMessages(result.id.toString() || index.toString())}
-                    className="px-4 py-2 text-sm text-white/70 hover:text-white/90 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-200"
-                  >
-                    Next Messages
-                  </button>
-                )}
-              </div>
+              {/* Navigation Buttons for Messages */}
+              {(hasPreviousPage || hasNextPage) && (
+                <div className="mt-4 flex justify-center gap-4">
+                  {hasPreviousPage && (
+                    <button
+                      onClick={() => handlePreviousMessages(result.id?.toString() || index.toString())}
+                      className="px-4 py-2 text-sm text-white/70 hover:text-white/90 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-200"
+                    >
+                      Previous Messages
+                    </button>
+                  )}
+                  {hasNextPage && (
+                    <button
+                      onClick={() => handleNextMessages(result.id?.toString() || index.toString())}
+                      className="px-4 py-2 text-sm text-white/70 hover:text-white/90 bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-200"
+                    >
+                      Next Messages
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           );
         })}
       </div>
 
-      {/* Pagination */}
+      {/* Pagination with loading state */}
       {totalPages > 1 && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={onPageChange}
-        />
+        <div className={`mt-8 ${isPaginationLoading ? 'pointer-events-none opacity-50' : ''}`}>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+            disabled={isPaginationLoading}
+          />
+          
+          {/* Loading indicator for pagination */}
+          {isPaginationLoading && (
+            <div className="text-center mt-4">
+              <p className="text-white/60 text-sm">Loading page {currentPage}...</p>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

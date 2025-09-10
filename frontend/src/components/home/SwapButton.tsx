@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
+
 export interface SwapButtonProps {
   /** Controlled checked state */
   checked?: boolean;
@@ -18,6 +19,7 @@ export interface SwapButtonProps {
   /** Age verified state */
   onAgeVerified?: (isOpen: boolean) => void;
 }
+
 const sizeConfig = {
   sm: {
     container: 'w-16 h-8',
@@ -38,6 +40,7 @@ const sizeConfig = {
     translate: 'translate-x-12'
   }
 };
+
 // Safe Mode Icon - Shield with sparkle
 const SafeIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" className={className}>
@@ -95,6 +98,7 @@ const SafeIcon: React.FC<{ className?: string }> = ({ className }) => (
     />
   </svg>
 );
+
 // Adults Mode Icon - Flame with flicker
 const AdultsIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" className={className}>
@@ -164,10 +168,13 @@ export const SwapButton: React.FC<SwapButtonProps> = ({
   
   const handleToggle = () => {
     if (disabled) return;
-    if (!localStorage.getItem('age_verified')) {
+    
+    // If switching to adults mode (checked = true) and age not verified
+    if (!isChecked && !localStorage.getItem('age_verified')) {
         onAgeVerified?.(true);
         return;
     }
+    
     const newChecked = !isChecked;
     
     if (!isControlled) {
@@ -285,7 +292,7 @@ export const SwapButton: React.FC<SwapButtonProps> = ({
         }}
         transition={{ duration: 0.2 }}
       >
-        {isChecked ? 'Adults Mode' : 'Safe Mode'}
+        {isChecked ? 'Restricted content' : 'Safe Mode'}
       </motion.p>
     </div>
   );

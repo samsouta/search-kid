@@ -41,7 +41,7 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ 
+              transition={{
                 duration: 0.4,
                 type: "spring",
                 stiffness: 300,
@@ -54,7 +54,7 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-black/20">
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-3xl pointer-events-none" />
-                
+
                 {/* Close Button */}
                 {/* <button
                   onClick={onClose}
@@ -72,7 +72,7 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({
                     transition={{ delay: 0.1 }}
                   >
                     <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                      Age Verification
+                      Restricted content
                     </h2>
                     <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mb-6"></div>
                   </motion.div>
@@ -84,7 +84,7 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({
                     transition={{ delay: 0.2 }}
                     className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed"
                   >
-                    Are you above 18 years old?
+                    This section may contain restricted material. Do you want to continue?
                   </motion.p>
 
                   {/* Buttons */}
@@ -99,7 +99,7 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({
                       onClick={handleYes}
                       className="w-full py-4 px-6 bg-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-sm border border-blue-400/50 rounded-2xl text-white font-semibold text-lg transition-all duration-300 hover:from-blue-500/40 hover:to-purple-500/40 hover:border-blue-300/70 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-[0.98] group"
                     >
-                      <span className="relative z-10">Yes, I&apos;m 18+</span>
+                      <span className="relative z-10">Yes</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </button>
 
@@ -108,19 +108,15 @@ const AgeVerificationModal: React.FC<AgeVerificationModalProps> = ({
                       onClick={handleNo}
                       className="w-full py-4 px-6 bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl text-white/80 font-medium text-lg transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:text-white hover:scale-[1.02] active:scale-[0.98]"
                     >
-                      No, I&apos;m under 18
+                      No
                     </button>
                   </motion.div>
 
                   {/* Disclaimer */}
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="text-sm text-white/60 leading-relaxed"
-                  >
-                    You must be at least 18 years old to enter.
-                  </motion.p>
+                  <p className="mt-4 text-xs text-white/50 px-2 sm:px-6">
+                    By entering, you accept our Terms of Service. — ဝင်ကြည့်ခြင်းဖြင့် သင်သည် ကျွန်တော်တို့၏ ဝန်ဆောင်မှု စည်းမျဉ်းများကို သဘောတူသည်ဟုမှတ်ယူပါသည်။
+                  </p>
+
                 </div>
               </div>
             </motion.div>
