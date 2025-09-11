@@ -32,11 +32,11 @@ logger = logging.getLogger(__name__)
 # CONFIG - edit as needed
 # ---------------------------
 ACCOUNTS = [
-    # {"session": "anon1", "api_id": 28887666, "api_hash": "1e01869b2b510bfecb4462d08b529b72"},
-    # {"session": "anon2", "api_id": 24972105, "api_hash": "c57ebdb04dbb2c6983f3e3ddd7b8aedd"},
-    # {"session": "anon3", "api_id": 20549861, "api_hash": "90146ca2ac1a20152804462baf976e85"},
+    {"session": "anon1", "api_id": 28887666, "api_hash": "1e01869b2b510bfecb4462d08b529b72"},
+    {"session": "anon2", "api_id": 24972105, "api_hash": "c57ebdb04dbb2c6983f3e3ddd7b8aedd"},
+    {"session": "anon3", "api_id": 20549861, "api_hash": "90146ca2ac1a20152804462baf976e85"},
     {"session": "anon4", "api_id": 16850912, "api_hash": "a6aefe94cd56f0c66c9fc406ad36aba9"},
-    # {"session": "anon5", "api_id": 22893596, "api_hash": "099e03188484d2041f7168abd7db8c8f"},
+    {"session": "anon5", "api_id": 22893596, "api_hash": "099e03188484d2041f7168abd7db8c8f"},
 ]
 LARAVEL_API = "https://api-searchkid.zakari.site/api/messages/import"
 IMPORT_TOKEN = "loveyoutenthousand"
