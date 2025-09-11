@@ -1,0 +1,92 @@
+2025-09-11 10:10:17,404 - INFO - === Telegram Crawler Starting ===
+2025-09-11 10:10:17,404 - INFO - --- Processing Account: anon4 ---
+2025-09-11 10:10:17,405 - INFO - Loaded 24 valid channels for anon4
+2025-09-11 10:10:17,408 - INFO - Connecting to 91.108.56.172:443/TcpFull...
+2025-09-11 10:10:17,411 - INFO - Connection to 91.108.56.172:443/TcpFull complete!
+2025-09-11 10:10:17,494 - INFO - [anon4] Client started successfully
+2025-09-11 10:10:17,494 - INFO - [anon4] Processing 24 channels
+2025-09-11 10:10:17,494 - INFO - [anon4] Processing channel 1/24: FLLAVWM
+2025-09-11 10:10:21,554 - INFO - [anon4] Processing FLLAVWM (last_id: 26083)
+2025-09-11 10:10:21,834 - INFO - [anon4] FLLAVWM -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:21,834 - INFO - [anon4] Processing channel 2/24: SeseXo
+2025-09-11 10:10:26,876 - INFO - [anon4] Processing SeseXo (last_id: 4426)
+2025-09-11 10:10:27,325 - INFO - [anon4] SeseXo -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:27,325 - INFO - [anon4] Processing channel 3/24: sifang_av
+2025-09-11 10:10:32,970 - INFO - [anon4] Processing sifang_av (last_id: 31850)
+2025-09-11 10:10:33,435 - INFO - [anon4] sifang_av -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:33,435 - INFO - [anon4] Processing channel 4/24: hentaiasmr3d
+2025-09-11 10:10:38,221 - INFO - [anon4] Processing hentaiasmr3d (last_id: 9208)
+2025-09-11 10:10:38,895 - INFO - [anon4] hentaiasmr3d -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:38,895 - INFO - [anon4] Processing channel 5/24: didilaosiji69
+2025-09-11 10:10:42,212 - INFO - [anon4] Processing didilaosiji69 (last_id: 8744)
+2025-09-11 10:10:42,737 - INFO - [anon4] didilaosiji69 -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:42,737 - INFO - [anon4] Processing channel 6/24: jingpin_av
+2025-09-11 10:10:45,868 - INFO - [anon4] Processing jingpin_av (last_id: 1244482)
+2025-09-11 10:10:46,449 - INFO - [anon4] jingpin_av -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:46,450 - INFO - [anon4] Processing channel 7/24: CDTeaHouseComments
+2025-09-11 10:10:50,225 - INFO - [anon4] Processing CDTeaHouseComments (last_id: 3953)
+2025-09-11 10:10:50,409 - INFO - [anon4] CDTeaHouseComments -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:50,409 - INFO - [anon4] Processing channel 8/24: juruntr
+2025-09-11 10:10:54,373 - INFO - [anon4] Processing juruntr (last_id: 1103)
+2025-09-11 10:10:54,604 - INFO - [anon4] juruntr -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:54,605 - INFO - [anon4] Processing channel 9/24: W88sexy
+2025-09-11 10:10:59,556 - INFO - [anon4] Processing W88sexy (last_id: 32689)
+2025-09-11 10:10:59,952 - INFO - [anon4] W88sexy -> fetched 0 (created 0, updated 0)
+2025-09-11 10:10:59,952 - INFO - [anon4] Processing channel 10/24: BL98000
+2025-09-11 10:11:04,162 - INFO - [anon4] Processing BL98000 (last_id: 8286)
+2025-09-11 10:11:04,607 - INFO - [anon4] BL98000 -> fetched 0 (created 0, updated 0)
+2025-09-11 10:11:04,607 - INFO - [anon4] Processing channel 11/24: TBBGIF
+2025-09-11 10:11:10,010 - INFO - [anon4] Processing TBBGIF (last_id: 0)
+2025-09-11 10:11:20,090 - INFO - [anon4] TBBGIF -> fetched 50 (created 0, updated 36)
+2025-09-11 10:11:20,090 - INFO - [anon4] Processing channel 12/24: nvyou10
+2025-09-11 10:11:23,618 - INFO - [anon4] Processing nvyou10 (last_id: 0)
+2025-09-11 10:11:27,993 - INFO - [anon4] nvyou10 -> fetched 50 (created 1, updated 0)
+2025-09-11 10:11:27,993 - INFO - [anon4] Processing channel 13/24: Zhangzhoulao666
+2025-09-11 10:11:33,264 - INFO - [anon4] Processing Zhangzhoulao666 (last_id: 0)
+2025-09-11 10:11:38,024 - INFO - [anon4] Zhangzhoulao666 -> fetched 50 (created 50, updated 0)
+2025-09-11 10:11:38,024 - INFO - [anon4] Processing channel 14/24: fjwyfl
+2025-09-11 10:11:42,517 - INFO - [anon4] Processing fjwyfl (last_id: 0)
+2025-09-11 10:11:46,987 - INFO - [anon4] fjwyfl -> fetched 50 (created 0, updated 0)
+2025-09-11 10:11:46,987 - INFO - [anon4] Processing channel 15/24: peevy
+2025-09-11 10:11:50,435 - INFO - [anon4] Processing peevy (last_id: 0)
+2025-09-11 10:11:55,209 - INFO - [anon4] peevy -> fetched 50 (created 0, updated 0)
+2025-09-11 10:11:55,209 - INFO - [anon4] Processing channel 16/24: laosiji10112
+2025-09-11 10:11:59,266 - INFO - [anon4] Processing laosiji10112 (last_id: 0)
+2025-09-11 10:12:04,196 - INFO - [anon4] laosiji10112 -> fetched 50 (created 0, updated 0)
+2025-09-11 10:12:04,196 - INFO - [anon4] Processing channel 17/24: TGJAVVIP
+2025-09-11 10:12:09,038 - INFO - [anon4] Processing TGJAVVIP (last_id: 0)
+2025-09-11 10:12:13,207 - INFO - [anon4] TGJAVVIP -> fetched 50 (created 50, updated 0)
+2025-09-11 10:12:13,207 - INFO - [anon4] Processing channel 18/24: AVvido
+2025-09-11 10:12:15,948 - INFO - [anon4] Processing AVvido (last_id: 0)
+2025-09-11 10:12:20,821 - INFO - [anon4] AVvido -> fetched 50 (created 0, updated 0)
+2025-09-11 10:12:20,821 - INFO - [anon4] Processing channel 19/24: shoucangav
+2025-09-11 10:12:25,178 - INFO - [anon4] Processing shoucangav (last_id: 0)
+2025-09-11 10:12:31,256 - INFO - [anon4] shoucangav -> fetched 50 (created 50, updated 0)
+2025-09-11 10:12:31,256 - INFO - [anon4] Processing channel 20/24: ribenAVnvyou0101
+2025-09-11 10:12:34,883 - INFO - [anon4] Processing ribenAVnvyou0101 (last_id: 0)
+2025-09-11 10:12:39,830 - INFO - [anon4] ribenAVnvyou0101 -> fetched 50 (created 33, updated 0)
+2025-09-11 10:12:39,830 - INFO - [anon4] Processing channel 21/24: AVnew
+2025-09-11 10:12:42,877 - INFO - [anon4] Processing AVnew (last_id: 0)
+2025-09-11 10:12:47,834 - INFO - [anon4] AVnew -> fetched 50 (created 50, updated 0)
+2025-09-11 10:12:47,834 - INFO - [anon4] Processing channel 22/24: chiguadashen00
+2025-09-11 10:12:52,683 - INFO - [anon4] Processing chiguadashen00 (last_id: 0)
+2025-09-11 10:12:58,021 - INFO - [anon4] chiguadashen00 -> fetched 50 (created 50, updated 0)
+2025-09-11 10:12:58,021 - INFO - [anon4] Processing channel 23/24: longpmv
+2025-09-11 10:13:01,937 - INFO - [anon4] Processing longpmv (last_id: 0)
+2025-09-11 10:13:06,802 - INFO - [anon4] longpmv -> fetched 50 (created 0, updated 0)
+2025-09-11 10:13:06,802 - INFO - [anon4] Processing channel 24/24: enjoybeauties
+2025-09-11 10:13:10,245 - INFO - [anon4] Processing enjoybeauties (last_id: 0)
+2025-09-11 10:13:14,444 - INFO - [anon4] enjoybeauties -> fetched 50 (created 50, updated 0)
+2025-09-11 10:13:14,446 - INFO - Disconnecting from 91.108.56.172:443/TcpFull...
+2025-09-11 10:13:14,447 - INFO - Disconnection from 91.108.56.172:443/TcpFull complete!
+2025-09-11 10:13:14,451 - INFO - [anon4] Client disconnected
+2025-09-11 10:13:14,451 - INFO - [anon4] Completed - Channels: 24, Messages: 700, Failed: 0
+2025-09-11 10:13:21,589 - INFO - 
+==================================================
+2025-09-11 10:13:21,589 - INFO - 📊 FINAL SUMMARY:
+2025-09-11 10:13:21,589 - INFO - Channels processed: 24
+2025-09-11 10:13:21,589 - INFO - Messages fetched: 700
+2025-09-11 10:13:21,589 - INFO - Records created: 334
+2025-09-11 10:13:21,589 - INFO - Records updated: 36
+2025-09-11 10:13:21,589 - INFO - Errors encountered: 0
+2025-09-11 10:13:21,589 - INFO - ==================================================

@@ -13,7 +13,7 @@ from telethon import TelegramClient
 from telethon.errors import (
     FloodWaitError, UsernameInvalidError, UsernameNotOccupiedError,
     ChannelPrivateError, ChatAdminRequiredError, AuthKeyUnregisteredError,
-    SessionPasswordNeededError, RPCError
+    SessionPasswordNeededError, RPCError, ConnectionError as TelethonConnectionError
 )
 from telethon.tl.types import MessageEntityHashtag, MessageEntityUrl, MessageEntityMention
 
@@ -423,6 +423,9 @@ async def fetch_channel_messages(
     
     except AuthKeyUnregisteredError:
         return {"status": "auth_error", "reason": "auth_key_unregistered"}
+    
+    except TelethonConnectionError as e:
+        return {"status": "connection_error", "reason": f"connection: {str(e)[:100]}"}
     
     except RPCError as e:
         return {"status": "rpc_error", "reason": f"rpc: {str(e)[:100]}"}
